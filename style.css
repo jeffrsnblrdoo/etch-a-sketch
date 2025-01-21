@@ -1,9 +1,16 @@
 .container {
     display: flex;
+    flex-wrap: wrap;
+    width: 832px;
+    height: 832px;
 }
 
-.grid {
+.grids {
     height: 50px;
     width: 50px;
-    border: 1px solid gray;
+    border: 1px solid grey;
+}
+
+.grids:hover {
+    background-color: black;
 }

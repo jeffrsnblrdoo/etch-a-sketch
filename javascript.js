@@ -1,8 +1,12 @@
 const container = document.querySelector(".container");
 
-for (let i = 1; i <= 16; i++) {
+for (let i = 0; i < 256; i++) {
     const div = document.createElement("div");
-    div.setAttribute("class", "grid");
+    div.classList.toggle("grids");
+
+    div.addEventListener("mouseover", () => {
+        div.style.backgroundColor = "black";
+    });
 
     container.appendChild(div);
 }
