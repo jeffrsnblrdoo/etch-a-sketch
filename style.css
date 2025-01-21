@@ -1,0 +1,9 @@
+.container {
+    display: flex;
+}
+
+.grid {
+    height: 50px;
+    width: 50px;
+    border: 1px solid gray;
+}
