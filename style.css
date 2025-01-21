@@ -29,4 +29,16 @@ button {
     border: none;
     border-radius: 10px;
     padding: 15px 25px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+button:hover {
+    background-color: hsl(217, 10%, 23%);
+    color: hsl(183, 100%, 33%);
+}
+
+button:active {
+    background-color: hsl(217, 10%, 20%);
+    color: hsl(183, 100%, 30%);
 }

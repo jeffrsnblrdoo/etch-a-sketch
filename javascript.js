@@ -1,4 +1,8 @@
 const container = document.querySelector(".container");
+const button = document.querySelector("button");
+
+let gridSizeBackup = 16;
+createGrid(gridSizeBackup);
 
 function createGrid(size) {
     container.innerHTML = "";
@@ -17,4 +21,13 @@ function createGrid(size) {
     }
 }
 
-createGrid(16);
+button.addEventListener("click", () => {
+    let gridSize = prompt("Enter the size of grid that you want: (MAX: 100)");
+
+    if (gridSize <= 100 && gridSize) {
+        gridSizeBackup = gridSize;
+        createGrid(gridSize);
+    } else {
+        createGrid(gridSizeBackup);
+    }
+});
