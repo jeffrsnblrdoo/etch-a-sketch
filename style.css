@@ -2,22 +2,31 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    gap: 20px;
     height: 100vh;
+    margin: 0;
+    background-color: #222831;
 }
 
 .container {
     display: flex;
     flex-wrap: wrap;
-    width: 832px;
-    height: 832px;
+    width: 800px;
+    height: 800px;
 }
 
 .grids {
-    height: 50px;
-    width: 50px;
-    border: 1px solid grey;
+    border: 1px solid #393e46;
+    box-sizing: border-box;
 }
 
-.grids:hover {
-    background-color: black;
+button {
+    color: #00adb5;
+    font-size: large;
+    font-weight: bold;
+    background-color: #393e46;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 25px;
 }

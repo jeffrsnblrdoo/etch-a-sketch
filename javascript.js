@@ -1,12 +1,20 @@
 const container = document.querySelector(".container");
 
-for (let i = 0; i < 256; i++) {
-    const div = document.createElement("div");
-    div.classList.toggle("grids");
+function createGrid(size) {
+    container.innerHTML = "";
+    const totalCells = size * size;
+    const cellSize = container.clientWidth / size;
 
-    div.addEventListener("mouseover", () => {
-        div.style.backgroundColor = "black";
-    });
-
-    container.appendChild(div);
+    for (let i = 0; i < totalCells; i++) {
+        const grid = document.createElement("div");
+        grid.addEventListener("mouseover", () => {
+            grid.style.backgroundColor = "#EEEEEE";
+        });
+        grid.className = "grids";
+        grid.style.width = `${cellSize}px`;
+        grid.style.height = `${cellSize}px`;
+        container.appendChild(grid);
+    }
 }
+
+createGrid(16);
